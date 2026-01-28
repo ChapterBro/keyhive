@@ -16,49 +16,49 @@ const canonicalPath = '/contact/';
   <section class="container py-14">
     <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
       <div class="space-y-6">
-        <p class="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Contact</p>
-        <h1 class="font-display text-4xl text-slate-900">Reach KeyHive anytime</h1>
-        <p class="text-lg text-slate-700">
+        <p class="text-xs font-semibold uppercase tracking-[0.35em] text-goldSoft">Contact</p>
+        <h1 class="font-display text-4xl text-slate-50">Reach KeyHive anytime</h1>
+        <p class="text-lg text-slate-300">
           We are a 24/7 mobile locksmith serving Kansas City, KS and nearby communities. Call for immediate help or email with questions.
         </p>
-        <div class="space-y-4 text-base text-slate-700">
+        <div class="space-y-4 text-base text-slate-300">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Phone</p>
-            <a class="text-xl font-semibold text-slate-900" href={contact.phoneHref}>{contact.phoneDisplay}</a>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-goldSoft">Phone</p>
+            <a class="text-xl font-semibold text-slate-50 hover:text-goldSoft" href={contact.phoneHref}>{contact.phoneDisplay}</a>
           </div>
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Email</p>
-            <a class="text-lg font-semibold text-slate-900" href={`mailto:${contact.email}`}>{contact.email}</a>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-goldSoft">Email</p>
+            <a class="text-lg font-semibold text-slate-50 hover:text-goldSoft" href={`mailto:${contact.email}`}>{contact.email}</a>
           </div>
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Hours</p>
-            <p class="text-lg font-semibold text-slate-900">{contact.hours}</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-goldSoft">Hours</p>
+            <p class="text-lg font-semibold text-slate-50">{contact.hours}</p>
           </div>
         </div>
         <div class="flex flex-col gap-3 sm:flex-row">
           <a
-            class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-base font-semibold text-slate-900"
+            class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-accent to-goldSoft px-6 py-3 text-base font-semibold text-ink shadow-glow"
             href={contact.phoneHref}
           >
             Call Now
           </a>
           <a
-            class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-base font-semibold text-slate-700"
+            class="inline-flex items-center justify-center rounded-full border border-white/10 bg-surface/70 px-6 py-3 text-base font-semibold text-slate-200 transition hover:shadow-glow"
             href={withTrailingSlash('/services')}
           >
             View services
           </a>
         </div>
       </div>
-      <div class="space-y-6 rounded-3xl border border-white/80 bg-white/90 p-6 shadow-soft">
-        <h2 class="text-lg font-semibold text-slate-900">Service area focus</h2>
-        <p class="text-sm text-slate-700">
+      <div class="space-y-6 rounded-3xl border border-white/10 bg-surface/70 p-6 shadow-soft">
+        <h2 class="text-lg font-semibold text-slate-50">Service area focus</h2>
+        <p class="text-sm text-slate-300">
           We service Kansas City, KS and the surrounding Kansas communities. If you are nearby, call to confirm availability.
         </p>
-        <div class="rounded-2xl border border-slate-100 bg-white px-4 py-3 text-sm text-slate-700">
+        <div class="rounded-2xl border border-white/10 bg-surface2/70 px-4 py-3 text-sm text-slate-300">
           Primary city: {contact.primaryCity}
         </div>
-        <div class="rounded-2xl border border-slate-100 bg-white px-4 py-3 text-sm text-slate-700">
+        <div class="rounded-2xl border border-white/10 bg-surface2/70 px-4 py-3 text-sm text-slate-300">
           Coverage includes residential, commercial, and automotive service calls.
         </div>
       </div>

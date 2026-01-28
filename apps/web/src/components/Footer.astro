@@ -4,54 +4,54 @@ import { contact } from '../config/contact';
 import { withTrailingSlash } from '../utils/urls';
 ---
 
-<footer class="border-t border-white/60 bg-white/80">
+<footer class="border-t border-white/10 bg-ink/80">
   <div class="container grid gap-10 py-10 md:grid-cols-[1.2fr_0.8fr_1fr]">
     <div class="space-y-4">
       <div class="flex items-center gap-3">
         <img
           src={brand.logoPath}
           alt={`${brand.name} logo`}
-          class="h-10 w-10 rounded-full object-contain"
+          class="h-10 w-10 rounded-xl object-contain"
           width="40"
           height="40"
           loading="lazy"
           decoding="async"
         />
         <div>
-          <p class="font-display text-lg text-slate-900">{brand.name}</p>
-          <p class="text-sm text-slate-600">{brand.tagline}</p>
+          <p class="font-display text-lg text-goldSoft">{brand.name}</p>
+          <p class="text-sm text-slate-300">{brand.tagline}</p>
         </div>
       </div>
-      <div class="text-sm text-slate-700">
-        <p>Phone: <a class="font-semibold text-slate-900" href={contact.phoneHref}>{contact.phoneDisplay}</a></p>
-        <p>Email: <a class="font-semibold text-slate-900" href={`mailto:${contact.email}`}>{contact.email}</a></p>
+      <div class="text-sm text-slate-300">
+        <p>Phone: <a class="font-semibold text-slate-50 hover:text-goldSoft" href={contact.phoneHref}>{contact.phoneDisplay}</a></p>
+        <p>Email: <a class="font-semibold text-slate-50 hover:text-goldSoft" href={`mailto:${contact.email}`}>{contact.email}</a></p>
         <p>Hours: {contact.hours}</p>
       </div>
     </div>
     <div class="space-y-3 text-sm">
-      <p class="font-semibold uppercase tracking-wide text-slate-500">Menu</p>
+      <p class="font-semibold uppercase tracking-wide text-goldSoft">Menu</p>
       <ul class="space-y-2">
-        <li><a class="text-slate-700 hover:text-slate-900" href={withTrailingSlash('/')}>Home</a></li>
-        <li><a class="text-slate-700 hover:text-slate-900" href={withTrailingSlash('/services')}>Services</a></li>
-        <li><a class="text-slate-700 hover:text-slate-900" href={withTrailingSlash('/areas')}>Locations</a></li>
-        <li><a class="text-slate-700 hover:text-slate-900" href={withTrailingSlash('/about')}>About</a></li>
-        <li><a class="text-slate-700 hover:text-slate-900" href={withTrailingSlash('/contact')}>Contact</a></li>
-        <li><a class="text-slate-700 hover:text-slate-900" href={withTrailingSlash('/privacy-policy')}>Privacy Policy</a></li>
+        <li><a class="text-slate-300 hover:text-goldSoft" href={withTrailingSlash('/')}>Home</a></li>
+        <li><a class="text-slate-300 hover:text-goldSoft" href={withTrailingSlash('/services')}>Services</a></li>
+        <li><a class="text-slate-300 hover:text-goldSoft" href={withTrailingSlash('/areas')}>Locations</a></li>
+        <li><a class="text-slate-300 hover:text-goldSoft" href={withTrailingSlash('/about')}>About</a></li>
+        <li><a class="text-slate-300 hover:text-goldSoft" href={withTrailingSlash('/contact')}>Contact</a></li>
+        <li><a class="text-slate-300 hover:text-goldSoft" href={withTrailingSlash('/privacy-policy')}>Privacy Policy</a></li>
       </ul>
     </div>
     <div class="space-y-3 text-sm">
-      <p class="font-semibold uppercase tracking-wide text-slate-500">Service Area</p>
-      <p class="text-slate-700">{contact.primaryCity} and nearby Kansas communities.</p>
+      <p class="font-semibold uppercase tracking-wide text-goldSoft">Service Area</p>
+      <p class="text-slate-300">{contact.primaryCity} and nearby Kansas communities.</p>
       <a
-        class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-800 shadow-sm"
+        class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-surface/70 px-4 py-2 font-semibold text-slate-50 shadow-soft transition hover:shadow-glow"
         href={withTrailingSlash('/areas')}
       >
         View all locations
       </a>
     </div>
   </div>
-  <div class="border-t border-white/80 bg-white/70">
-    <div class="container flex flex-col justify-between gap-2 py-4 text-xs text-slate-600 md:flex-row">
+  <div class="border-t border-white/10 bg-ink/90">
+    <div class="container flex flex-col justify-between gap-2 py-4 text-xs text-slate-400 md:flex-row">
       <p>(c) {new Date().getFullYear()} {brand.name}. All rights reserved.</p>
       <p>Mobile locksmith service in Kansas City, KS and surrounding areas.</p>
     </div>

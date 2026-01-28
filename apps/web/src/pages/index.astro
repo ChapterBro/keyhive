@@ -20,59 +20,68 @@ const canonicalPath = '/';
 >
   <section class="container grid gap-10 py-16 lg:grid-cols-[1.15fr_0.85fr]">
     <div class="space-y-6">
-      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Kansas City, KS - 24/7 Service</p>
-      <h1 class="font-display text-4xl text-slate-900 md:text-5xl">
+      <img
+        src={brand.logoPath}
+        alt={`${brand.name} logo`}
+        class="h-24 w-24 rounded-2xl object-contain"
+        width="160"
+        height="160"
+        loading="eager"
+        decoding="async"
+      />
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-goldSoft">Kansas City, KS - 24/7 Service</p>
+      <h1 class="font-display text-4xl text-slate-50 md:text-5xl">
         Fast, reliable locksmith help across Kansas City, KS
       </h1>
-      <p class="text-lg text-slate-700">
+      <p class="text-lg text-slate-200">
         {brand.name} is a mobile locksmith team built for urgent lockouts, rekeying, and security upgrades. We arrive ready to solve the issue on-site with clear options and careful workmanship.
       </p>
       <div class="flex flex-col gap-3 sm:flex-row">
         <a
-          class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-base font-semibold text-slate-900 shadow-soft"
+          class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-accent to-goldSoft px-6 py-3 text-base font-semibold text-ink shadow-glow"
           href={contact.phoneHref}
         >
           Call Now {contact.phoneDisplay}
         </a>
         <a
-          class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-base font-semibold text-slate-700"
+          class="inline-flex items-center justify-center rounded-full border border-white/10 bg-surface/70 px-6 py-3 text-base font-semibold text-slate-200 transition hover:shadow-glow"
           href={withTrailingSlash('/services')}
         >
           View Services
         </a>
       </div>
-      <div class="grid gap-4 rounded-3xl border border-white/80 bg-white/80 p-6 shadow-soft">
+      <div class="grid gap-4 rounded-3xl border border-white/10 bg-surface/70 p-6 shadow-soft">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Why KeyHive</p>
-          <p class="mt-2 text-base text-slate-700">Mobile service with transparent estimates and flexible scheduling.</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-goldSoft">Why KeyHive</p>
+          <p class="mt-2 text-base text-slate-200">Mobile service with transparent estimates and flexible scheduling.</p>
         </div>
-        <div class="grid gap-3 text-sm text-slate-600 sm:grid-cols-2">
-          <div class="rounded-2xl border border-slate-100 bg-white px-4 py-3">24/7 emergency response</div>
-          <div class="rounded-2xl border border-slate-100 bg-white px-4 py-3">Residential, commercial, and automotive</div>
-          <div class="rounded-2xl border border-slate-100 bg-white px-4 py-3">Non-destructive entry focus</div>
-          <div class="rounded-2xl border border-slate-100 bg-white px-4 py-3">Serving Kansas City, KS + nearby</div>
+        <div class="grid gap-3 text-sm text-slate-200 sm:grid-cols-2">
+          <div class="rounded-2xl border border-white/10 bg-surface2/70 px-4 py-3">24/7 emergency response</div>
+          <div class="rounded-2xl border border-white/10 bg-surface2/70 px-4 py-3">Residential, commercial, and automotive</div>
+          <div class="rounded-2xl border border-white/10 bg-surface2/70 px-4 py-3">Non-destructive entry focus</div>
+          <div class="rounded-2xl border border-white/10 bg-surface2/70 px-4 py-3">Serving Kansas City, KS + nearby</div>
         </div>
       </div>
     </div>
-    <div class="space-y-5 rounded-3xl border border-white/70 bg-white/85 p-6 shadow-soft">
-      <h2 class="font-display text-2xl text-slate-900">Popular services</h2>
+    <div class="space-y-5 rounded-3xl border border-white/10 bg-surface/70 p-6 shadow-soft">
+      <h2 class="font-display text-2xl text-slate-50">Popular services</h2>
       <div class="space-y-4">
         {topServices.map((service) => (
           <a
-            class="group block rounded-2xl border border-slate-100 bg-white p-4 transition hover:-translate-y-0.5 hover:shadow-soft"
+            class="group block rounded-2xl border border-white/10 bg-surface2/70 p-4 transition hover:-translate-y-0.5 hover:shadow-glow"
             href={withTrailingSlash(`/services/${service.slug}`)}
           >
             <div class="flex items-start justify-between gap-4">
               <div>
-                <p class="text-base font-semibold text-slate-900">{service.name}</p>
-                <p class="mt-1 text-sm text-slate-600">{service.description}</p>
+                <p class="text-base font-semibold text-slate-50">{service.name}</p>
+                <p class="mt-1 text-sm text-slate-300">{service.description}</p>
               </div>
-              <span class="text-sm font-semibold text-slate-400 group-hover:text-accent">-></span>
+              <span class="text-sm font-semibold text-slate-500 group-hover:text-accent">-></span>
             </div>
           </a>
         ))}
       </div>
-      <a class="text-sm font-semibold text-slate-700 underline" href={withTrailingSlash('/services')}>
+      <a class="text-sm font-semibold text-slate-200 underline" href={withTrailingSlash('/services')}>
         See all locksmith services
       </a>
     </div>
@@ -80,38 +89,38 @@ const canonicalPath = '/';
 
   <section class="container space-y-8 py-12">
     <div class="flex flex-col gap-3">
-      <p class="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Service Areas</p>
-      <h2 class="font-display text-3xl text-slate-900">Serving Kansas City, KS and nearby communities</h2>
-      <p class="text-base text-slate-700">
+      <p class="text-xs font-semibold uppercase tracking-[0.35em] text-goldSoft">Service Areas</p>
+      <h2 class="font-display text-3xl text-slate-50">Serving Kansas City, KS and nearby communities</h2>
+      <p class="text-base text-slate-300">
         We stay mobile so you can get help wherever you are. Our technicians cover residential neighborhoods and commercial districts throughout the Kansas side of the metro.
       </p>
     </div>
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {featuredCities.map((area) => (
         <a
-          class="rounded-2xl border border-slate-100 bg-white px-4 py-4 text-sm font-semibold text-slate-800 shadow-soft"
+          class="rounded-2xl border border-white/10 bg-surface/70 px-4 py-4 text-sm font-semibold text-slate-50 shadow-soft transition hover:shadow-glow"
           href={withTrailingSlash(`/areas/${area.slug}`)}
         >
           {area.name}
         </a>
       ))}
     </div>
-    <a class="text-sm font-semibold text-slate-700 underline" href={withTrailingSlash('/areas')}>
+    <a class="text-sm font-semibold text-slate-200 underline" href={withTrailingSlash('/areas')}>
       View all service areas
     </a>
   </section>
 
   <section class="container py-12">
-    <div class="grid gap-8 rounded-3xl border border-white/80 bg-slate-900 px-8 py-10 text-white md:grid-cols-[1.3fr_0.7fr]">
+    <div class="grid gap-8 rounded-3xl border border-white/10 bg-surface/80 px-8 py-10 text-white md:grid-cols-[1.3fr_0.7fr]">
       <div>
         <h2 class="font-display text-3xl">Need immediate locksmith help?</h2>
-        <p class="mt-3 text-base text-slate-200">
+        <p class="mt-3 text-base text-slate-300">
           We are available {contact.hours}. Call now for fast response and clear guidance from a local technician.
         </p>
       </div>
       <div class="flex items-center md:justify-end">
         <a
-          class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-base font-semibold text-slate-900"
+          class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-accent to-goldSoft px-6 py-3 text-base font-semibold text-ink shadow-glow"
           href={contact.phoneHref}
         >
           Call {contact.phoneDisplay}

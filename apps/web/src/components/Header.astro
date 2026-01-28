@@ -4,29 +4,29 @@ import { contact } from '../config/contact';
 import { withTrailingSlash } from '../utils/urls';
 ---
 
-<header class="w-full border-b border-white/60 bg-white/70 backdrop-blur">
+<header class="w-full border-b border-white/10 bg-ink/70 backdrop-blur">
   <div class="container flex items-center justify-between py-4">
-    <a href={withTrailingSlash('/')} class="flex items-center gap-3 text-lg font-semibold text-slate-900">
+    <a href={withTrailingSlash('/')} class="flex items-center gap-3 text-lg font-semibold text-slate-50">
       <img
         src={brand.logoPath}
         alt={`${brand.name} logo`}
-        class="h-10 w-10 rounded-full object-contain"
-        width="40"
-        height="40"
+        class="h-14 w-14 rounded-xl object-contain"
+        width="56"
+        height="56"
         loading="eager"
         decoding="async"
       />
-      <span class="font-display text-xl tracking-wide">{brand.name}</span>
+      <span class="font-display text-xl tracking-wide text-goldSoft">{brand.name}</span>
     </a>
-    <nav class="hidden items-center gap-6 text-sm font-semibold text-slate-700 md:flex">
-      <a class="hover:text-slate-900" href={withTrailingSlash('/services')}>Services</a>
-      <a class="hover:text-slate-900" href={withTrailingSlash('/areas')}>Locations</a>
-      <a class="hover:text-slate-900" href={withTrailingSlash('/about')}>About</a>
-      <a class="hover:text-slate-900" href={withTrailingSlash('/contact')}>Contact</a>
+    <nav class="hidden items-center gap-6 text-sm font-semibold text-slate-200 md:flex">
+      <a class="hover:text-goldSoft" href={withTrailingSlash('/services')}>Services</a>
+      <a class="hover:text-goldSoft" href={withTrailingSlash('/areas')}>Locations</a>
+      <a class="hover:text-goldSoft" href={withTrailingSlash('/about')}>About</a>
+      <a class="hover:text-goldSoft" href={withTrailingSlash('/contact')}>Contact</a>
     </nav>
     <a
       href={contact.phoneHref}
-      class="hidden rounded-full border border-accent bg-accent px-4 py-2 text-sm font-semibold text-slate-900 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg md:inline-flex"
+      class="hidden rounded-full bg-gradient-to-r from-accent to-goldSoft px-4 py-2 text-sm font-semibold text-ink shadow-soft transition hover:-translate-y-0.5 hover:shadow-glow md:inline-flex"
     >
       Call {contact.phoneDisplay}
     </a>
