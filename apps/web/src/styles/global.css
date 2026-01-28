@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 html {
@@ -10,12 +10,13 @@ html {
 
 body {
   font-family: "Source Sans 3", sans-serif;
-  background-color: #f6f3ed;
+  background-color: #07080a;
   background-image:
-    radial-gradient(circle at 15% 15%, rgba(217, 164, 65, 0.12), transparent 40%),
-    radial-gradient(circle at 85% 10%, rgba(12, 18, 32, 0.08), transparent 45%),
-    radial-gradient(circle at 50% 80%, rgba(217, 164, 65, 0.08), transparent 45%);
-  color: #1a1b1f;
+    radial-gradient(circle at 12% 18%, rgba(217, 164, 65, 0.22), transparent 48%),
+    radial-gradient(circle at 82% 12%, rgba(245, 211, 124, 0.12), transparent 42%),
+    radial-gradient(circle at 55% 85%, rgba(217, 164, 65, 0.12), transparent 50%);
+  color: #f8fafc;
+  overflow-x: hidden;
 }
 
 img {
@@ -29,4 +30,32 @@ a {
 
 ::selection {
   background: rgba(217, 164, 65, 0.3);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 120px 120px;
+  opacity: 0.12;
+  animation: gridPan 22s linear infinite;
+}
+
+@keyframes gridPan {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 120px 120px, -120px -120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .bg-grid {
+    animation: none;
+  }
 }

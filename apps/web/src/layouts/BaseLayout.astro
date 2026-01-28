@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import StickyCta from '../components/StickyCta.astro';
+import BackgroundFX from '../components/BackgroundFX.astro';
 import { brand } from '../config/brand';
 import { buildCanonical, ensureTrailingSlash, getSiteUrl } from '../utils/urls';
 
@@ -67,7 +68,10 @@ const jsonLdItems = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
       <script type="application/ld+json" is:inline set:html={JSON.stringify(item)} />
     ))}
   </head>
-  <body class="min-h-screen bg-transparent text-slate-900">
+  <body class="min-h-screen bg-transparent text-slate-50 overflow-x-hidden">
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <BackgroundFX />
+    </div>
     <a href="#main-content" class="sr-only focus:not-sr-only">Skip to content</a>
     <Header />
     <main id="main-content" class="pb-20 md:pb-0">

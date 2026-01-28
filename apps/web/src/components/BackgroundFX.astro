@@ -1,0 +1,51 @@
+---
+---
+
+<div class="absolute inset-0">
+  <div
+    class="absolute -top-40 left-1/2 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(217,164,65,0.35),transparent_70%)] blur-3xl"
+    aria-hidden="true"
+  ></div>
+  <div class="bg-grid absolute inset-0" aria-hidden="true"></div>
+  <svg
+    class="absolute inset-0 h-full w-full opacity-[0.06]"
+    viewBox="0 0 1200 800"
+    fill="none"
+    aria-hidden="true"
+  >
+    <path
+      d="M-50 620 C 180 520 300 640 470 520 C 640 400 760 520 940 420 C 1120 320 1220 360 1320 300"
+      stroke="rgba(217,164,65,0.9)"
+      stroke-width="2"
+      stroke-dasharray="6 10"
+    >
+      <animate
+        attributeName="stroke-dashoffset"
+        values="0;64"
+        dur="12s"
+        repeatCount="indefinite"
+      />
+    </path>
+    <path
+      d="M-100 240 C 160 180 330 240 520 140 C 710 40 920 100 1200 -40"
+      stroke="rgba(245,211,124,0.7)"
+      stroke-width="1.5"
+      stroke-dasharray="4 8"
+    >
+      <animate
+        attributeName="stroke-dashoffset"
+        values="0;52"
+        dur="16s"
+        repeatCount="indefinite"
+      />
+    </path>
+  </svg>
+</div>
+
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    svg animate {
+      display: none;
+    }
+  }
+</style>
