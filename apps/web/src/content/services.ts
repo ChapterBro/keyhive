@@ -15,9 +15,9 @@ export const services: Service[] = [
     name: 'Emergency Locksmith',
     title: 'Emergency Locksmith in Kansas City, KS',
     description:
-      'Fast 24/7 emergency locksmith help for lockouts, broken keys, and urgent security issues in Kansas City, KS and nearby areas.',
+      '24/7 mobile emergency locksmith in Kansas City, KS for home, car, and business lockouts, broken keys, and urgent access issues with damage-aware entry.',
     overview:
-      'When something breaks at the worst time, you need a mobile locksmith who answers quickly and arrives ready to solve the issue. We handle urgent home, business, and vehicle situations with clear estimates and clean, professional work.',
+      'Locked out? KeyHive provides fast, mobile emergency locksmith service for homes, vehicles, and businesses across the Kansas City area. We respond quickly and use professional, damage-aware entry methods to restore access without unnecessary damage.',
     bullets: [
       'Rapid response for lockouts and urgent security issues',
       'Non-destructive entry whenever possible',
@@ -41,9 +41,9 @@ export const services: Service[] = [
     name: 'Residential Locksmith',
     title: 'Residential Locksmith Services',
     description:
-      'Home locksmith services for lock upgrades, rekeying, repairs, and security improvements throughout Kansas City, KS and nearby neighborhoods.',
+      'Residential locksmith in Kansas City, KS for lock changes, rekeying, repairs, smart locks, and lockouts. Practical upgrades without upsells or pressure.',
     overview:
-      'Protecting your home starts with dependable locks and smart access control. We work with doors, deadbolts, and smart lock setups to keep your home secure without the stress.',
+      'KeyHive secures homes with lock changes, rekeying, lock repairs, smart lock installation, and home lockout service. We focus on real security improvements, not upsells.',
     bullets: [
       'Deadbolt and handle set upgrades',
       'Smart lock setup and troubleshooting',
@@ -67,9 +67,9 @@ export const services: Service[] = [
     name: 'Residential Lockout',
     title: 'Residential Lockout Help',
     description:
-      'Locked out of your house? We provide quick, careful home lockout service across Kansas City, KS and surrounding areas.',
+      'Residential lockout service in Kansas City, KS with fast, damage-aware entry, clear verification, and careful handling to get you back inside safely.',
     overview:
-      'Getting locked out is stressful. We aim for fast arrival times and gentle entry techniques to protect your door, frame, and hardware.',
+      'Locked out of your home? KeyHive responds quickly in Kansas City, KS with damage-aware entry methods to restore access while protecting your doors and hardware.',
     bullets: [
       'Careful, non-destructive entry methods',
       'Available 24/7 for urgent situations',
@@ -93,9 +93,9 @@ export const services: Service[] = [
     name: 'Lock Repair',
     title: 'Lock Repair for Homes and Businesses',
     description:
-      'Repair jammed, loose, or misaligned locks with reliable on-site service in Kansas City, KS and nearby areas.',
+      'Lock repair in Kansas City, KS for homes and businesses. On-site fixes for worn or malfunctioning locks that restore security without replacements when possible.',
     overview:
-      'A lock that sticks or fails can compromise security. We diagnose the issue and restore smooth operation with minimal disruption.',
+      'Malfunctioning or worn locks weaken security. KeyHive repairs residential and commercial locks on-site whenever possible, restoring proper function without pushing full replacements.',
     bullets: [
       'Fix sticking, loose, or misaligned locks',
       'Adjust door hardware and strike plates',
@@ -119,9 +119,9 @@ export const services: Service[] = [
     name: 'Lock Installation',
     title: 'New Lock Installation',
     description:
-      'Install new deadbolts, lever sets, and smart locks for improved security in Kansas City, KS and surrounding areas.',
+      'Residential lock installation in Kansas City, KS with proper alignment, smooth operation, and dependable long-term security with reliable hardware fit.',
     overview:
-      'New locks give you a fresh start and better security. We install high-quality hardware with clean finishes and proper alignment.',
+      'KeyHive installs residential locks with proper alignment and smooth operation to ensure dependable, long-term security.',
     bullets: [
       'Deadbolts, levers, and knob sets',
       'Smart lock setup and pairing',
@@ -145,9 +145,9 @@ export const services: Service[] = [
     name: 'Rekeying Services',
     title: 'Lock Rekeying Services',
     description:
-      'Rekey your locks for a fresh key set without replacing hardware in Kansas City, KS and nearby communities.',
+      'Lock rekeying in Kansas City, KS so old keys stop working. Ideal after moves, tenant changes, or lost keys with fast, on-site mobile service and clear options.',
     overview:
-      'Rekeying updates the internal pins so old keys stop working. It is a fast, cost-effective way to reset access after a move or key loss.',
+      'KeyHive rekeys existing locks so old keys no longer work, making this ideal after moves, tenant changes, or lost keys.',
     bullets: [
       'Change keys without replacing hardware',
       'Match multiple locks to one key',
@@ -171,9 +171,9 @@ export const services: Service[] = [
     name: 'Commercial Locksmith',
     title: 'Commercial Locksmith for Kansas Businesses',
     description:
-      'Commercial locksmith service for offices, storefronts, and facilities across Kansas City, KS and nearby areas.',
+      'Commercial locksmith in Kansas City, KS for lock installs, rekeying, master key systems, and access control that keep operations secure and moving daily.',
     overview:
-      'Your business needs reliable access control and secure entry points. We support offices, retail, and light industrial spaces with modern hardware and key control.',
+      'KeyHive helps businesses control access and reduce risk with commercial lock installation, rekeying, master key systems, and access control solutions designed to keep operations running smoothly.',
     bullets: [
       'Master key and rekeying support',
       'Door hardware repair and replacement',
@@ -197,9 +197,9 @@ export const services: Service[] = [
     name: 'Commercial Lockout',
     title: 'Commercial Lockout Assistance',
     description:
-      'Locked out of your business? We provide fast commercial lockout help in Kansas City, KS and surrounding areas.',
+      'Commercial lockout help in Kansas City, KS with fast, damage-aware entry so businesses regain access without unnecessary door damage or downtime on-site.',
     overview:
-      'Downtime is costly. We help businesses regain access quickly while keeping doors and hardware intact whenever possible.',
+      'KeyHive restores business access fast in Kansas City, KS with professional, damage-aware entry that protects doors and keeps downtime to a minimum.',
     bullets: [
       'Rapid response for business lockouts',
       'Careful entry to protect hardware',
@@ -223,9 +223,9 @@ export const services: Service[] = [
     name: 'Automotive Locksmith',
     title: 'Automotive Locksmith Services',
     description:
-      'Mobile automotive locksmith services for keys, locks, and ignition issues in Kansas City, KS and nearby cities.',
+      'Mobile automotive locksmith in Kansas City, KS for lockouts, key replacement, fob programming, ignition issues, and broken key removal for most vehicles.',
     overview:
-      'From lockouts to key replacements, we handle many makes and models on-site. Our mobile setup lets us solve most issues without towing.',
+      'KeyHive offers full mobile automotive locksmith services, including lockouts, key replacement, key fob programming, ignition issues, and broken key removal for most vehicles.',
     bullets: [
       'Vehicle lockout assistance',
       'Key cutting and programming options',
@@ -249,9 +249,9 @@ export const services: Service[] = [
     name: 'Car Lockout',
     title: 'Car Lockout Service',
     description:
-      'Locked out of your car? We provide quick, careful entry in Kansas City, KS and nearby service areas.',
+      'Car lockout service in Kansas City, KS with non-destructive entry, fast response, and damage-aware care so you are back on the road quickly, 24/7 today.',
     overview:
-      'Car lockouts are common and frustrating. We use safe entry techniques to get you back in without damaging the vehicle.',
+      'Locked out of your vehicle? KeyHive provides professional car unlocking using non-destructive techniques to get you back on the road quickly.',
     bullets: [
       'Non-destructive vehicle entry',
       'Fast response across service areas',
@@ -275,9 +275,9 @@ export const services: Service[] = [
     name: 'Car Key Programming',
     title: 'Car Key Programming and Replacement',
     description:
-      'Mobile car key programming and replacement services for select vehicles in Kansas City, KS and nearby areas.',
+      'Mobile car key programming in Kansas City, KS for transponder keys and fobs. We verify compatibility and get keys working fast for many makes on-site.',
     overview:
-      'Modern vehicles rely on chip keys and fobs. We program compatible keys on-site so you can avoid long dealership delays.',
+      'KeyHive programs transponder keys and key fobs so they communicate correctly with your vehicle. Mobile service is available for many makes and models.',
     bullets: [
       'Chip key and fob programming',
       'Mobile service at your location',
@@ -294,6 +294,240 @@ export const services: Service[] = [
       'Lost or damaged key fobs',
       'Need for an extra key',
       'Replacing worn or failing keys'
+    ]
+  },
+  {
+    slug: 'high-security-lock-installation',
+    name: 'High-Security Lock Installation',
+    title: 'Mobile High-Security Lock Installation in Kansas City, KS',
+    description:
+      'High-security lock installation in Kansas City, KS for homes and businesses needing stronger protection against picking, drilling, and forced entry.',
+    overview:
+      'KeyHive installs high-security locks designed to resist picking, drilling, and forced entry for homes and businesses that require stronger protection.',
+    bullets: [
+      'Install high-security deadbolts and cylinders',
+      'Reinforced hardware to deter drilling and picking',
+      'Upgrades for homes, offices, and storefronts',
+      'Professional alignment and verification'
+    ],
+    process: [
+      'Review doors and security goals',
+      'Recommend high-security hardware options',
+      'Install and align locksets on-site',
+      'Test operation and provide keys'
+    ],
+    idealFor: [
+      'Homes needing stronger entry protection',
+      'Businesses with higher security requirements',
+      'Upgrades after a break-in'
+    ]
+  },
+  {
+    slug: 'garage-door-lock-service',
+    name: 'Garage Door Lock Service',
+    title: 'Mobile Garage Door Lock Service in Kansas City, KS',
+    description:
+      'Garage door lock service in Kansas City, KS for repairs, upgrades, and replacements on garage and side-door entry points.',
+    overview:
+      'Garage access is a common weak point. KeyHive installs, repairs, and upgrades garage and side-door locks to improve overall security.',
+    bullets: [
+      'Repair and replace garage door locks',
+      'Upgrade side-door entry hardware',
+      'Improve alignment and latch security',
+      'Mobile service at your location'
+    ],
+    process: [
+      'Inspect garage and side-door locks',
+      'Explain repair vs upgrade options',
+      'Complete service with proper alignment',
+      'Test locks and confirm secure closure'
+    ],
+    idealFor: [
+      'Aging or loose garage locks',
+      'New move-ins needing reset keys',
+      'Security upgrades for attached garages'
+    ]
+  },
+  {
+    slug: 'home-lockout-prevention',
+    name: 'Home Lockout Prevention',
+    title: 'Mobile Home Lockout Prevention in Kansas City, KS',
+    description:
+      'Home lockout prevention in Kansas City, KS through rekeying, smart key control, and keyless entry solutions built for daily use.',
+    overview:
+      'KeyHive helps homeowners reduce repeat lockouts through rekeying, smarter key control, and keyless entry solutions built for everyday use.',
+    bullets: [
+      'Rekey existing locks after changes',
+      'Create reliable spare key plans',
+      'Keyless and smart lock options',
+      'Guidance on key control habits'
+    ],
+    process: [
+      'Review doors and current access',
+      'Identify repeat lockout causes',
+      'Recommend rekeying or keyless upgrades',
+      'Implement changes and test access'
+    ],
+    idealFor: [
+      'Families with frequent lockouts',
+      'New homeowners setting up access',
+      'Rental owners reducing lockout calls'
+    ]
+  },
+  {
+    slug: 'smart-lock-installation',
+    name: 'Smart Lock Installation',
+    title: 'Mobile Smart Lock Installation in Kansas City, KS',
+    description:
+      'Smart lock installation in Kansas City, KS with secure setup, reliable configuration, and easy-to-use keyless access for homes.',
+    overview:
+      'KeyHive installs and configures smart and keyless locks to ensure they are secure, reliable, and easy to use.',
+    bullets: [
+      'Install and configure smart locks',
+      'Pair devices and set access codes',
+      'Verify door alignment and security',
+      'Teach operation and backup access'
+    ],
+    process: [
+      'Confirm door type and compatibility',
+      'Install and align smart lock hardware',
+      'Configure app or keypad settings',
+      'Test access and provide guidance'
+    ],
+    idealFor: [
+      'Homeowners upgrading to keyless access',
+      'Busy households needing shared codes',
+      'Rentals with changing access needs'
+    ]
+  },
+  {
+    slug: 'home-security-improvements',
+    name: 'Home Security Improvements',
+    title: 'Mobile Home Security Improvements in Kansas City, KS',
+    description:
+      'Home security improvements in Kansas City, KS with upgraded locks and door hardware to strengthen entry points without overcomplication.',
+    overview:
+      'KeyHive upgrades locks and door hardware to strengthen entry points and improve overall home security.',
+    bullets: [
+      'Upgrade deadbolts and latch hardware',
+      'Improve strike plates and door fit',
+      'Add key control or rekey options',
+      'Recommendations for vulnerable doors'
+    ],
+    process: [
+      'Assess entry points and hardware',
+      'Prioritize improvements by risk',
+      'Install upgrades with clean finish',
+      'Test doors and review changes'
+    ],
+    idealFor: [
+      'Older homes with worn hardware',
+      'New move-ins seeking better security',
+      'Families wanting stronger entry points'
+    ]
+  },
+  {
+    slug: 'broken-key-removal',
+    name: 'Broken Key Removal',
+    title: 'Mobile Broken Key Removal in Kansas City, KS',
+    description:
+      'Broken key removal in Kansas City, KS when keys snap in locks or ignitions, plus replacement assistance when needed.',
+    overview:
+      'If a key breaks inside a lock or ignition, KeyHive safely removes it and assists with replacement when needed.',
+    bullets: [
+      'Safe extraction from locks and ignitions',
+      'Assess damage to lock or cylinder',
+      'Replacement keys when needed',
+      'On-site mobile service'
+    ],
+    process: [
+      'Inspect the broken key and lock',
+      'Extract pieces with proper tools',
+      'Test lock function and alignment',
+      'Provide replacement key options'
+    ],
+    idealFor: [
+      'Keys snapped in door locks',
+      'Broken keys in car ignitions',
+      'Stuck fragments preventing access'
+    ]
+  },
+  {
+    slug: 'sliding-door-window-lock-service',
+    name: 'Sliding Door and Window Lock Service',
+    title: 'Mobile Sliding Door and Window Lock Service in Kansas City, KS',
+    description:
+      'Sliding door and window lock service in Kansas City, KS to repair or replace hardware and restore smooth, secure operation.',
+    overview:
+      'KeyHive repairs and replaces sliding door and window locks to restore proper function and security to often-overlooked entry points.',
+    bullets: [
+      'Repair worn sliding door locks',
+      'Replace window latches and hardware',
+      'Improve alignment and smooth operation',
+      'Security checks for weak points'
+    ],
+    process: [
+      'Inspect doors, tracks, and latches',
+      'Recommend repair or replacement',
+      'Install or adjust hardware',
+      'Test smooth movement and security'
+    ],
+    idealFor: [
+      'Sticking or loose sliding doors',
+      'Windows with failing latches',
+      'Homes with aging hardware'
+    ]
+  },
+  {
+    slug: 'residential-safe-opening',
+    name: 'Residential Safe Opening',
+    title: 'Mobile Residential Safe Opening in Kansas City, KS',
+    description:
+      'Residential safe opening in Kansas City, KS with professional access methods that prioritize non-destructive entry whenever possible.',
+    overview:
+      'Locked out of a home safe? KeyHive provides professional safe access services while prioritizing non-destructive methods whenever possible.',
+    bullets: [
+      'Non-destructive safe access when possible',
+      'Handle keypad or key lock issues',
+      'Careful entry to protect contents',
+      'Guidance on reset or replacement'
+    ],
+    process: [
+      'Confirm safe type and access issue',
+      'Attempt non-destructive entry first',
+      'Open safely and verify access',
+      'Provide reset or upgrade options'
+    ],
+    idealFor: [
+      'Lost safe keys or codes',
+      'Battery or keypad failures',
+      'New homeowners with inherited safes'
+    ]
+  },
+  {
+    slug: 'master-key-systems',
+    name: 'Master Key Systems',
+    title: 'Mobile Master Key Systems in Kansas City, KS',
+    description:
+      'Master key systems in Kansas City, KS for offices and rentals to control access across multiple doors with clear separation.',
+    overview:
+      'KeyHive designs master key systems for offices, rentals, and multi-door properties while maintaining proper access separation and security control.',
+    bullets: [
+      'Design master and sub-master levels',
+      'Rekey doors into organized system',
+      'Maintain access separation by role',
+      'Documentation for future changes'
+    ],
+    process: [
+      'Map doors and access needs',
+      'Design the key hierarchy',
+      'Rekey and label cylinders',
+      'Test access and review control plan'
+    ],
+    idealFor: [
+      'Offices with multiple departments',
+      'Property managers and landlords',
+      'Businesses with controlled access'
     ]
   }
 ];

@@ -199,3 +199,113 @@ PUBLIC_SITE_URL=https://keyhivelocksmith.com pnpm -C apps/web build
 18:42:17 [build] 39 page(s) built in 417ms
 18:42:17 [build] Complete!
 ```
+
+## 2026-01-28
+- Upgraded services catalog copy for core services and updated residential/commercial lockout messaging.
+- Added new service entries to expand the catalog with additional service pages.
+- Commands run:
+
+```bash
+pnpm -C apps/web lint
+```
+```text
+> apps-web@0.0.1 lint /Users/hushdesk/dev/keyhive/apps/web
+> astro check
+
+19:08:58 [vite] Re-optimizing dependencies because vite config has changed
+19:08:58 [content] Syncing content
+19:08:58 [content] Synced content
+19:08:58 [types] Generated 54ms
+19:08:58 [check] Getting diagnostics for Astro files in /Users/hushdesk/dev/keyhive/apps/web...
+Result (26 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+```
+
+```bash
+PUBLIC_SITE_URL=https://keyhivelocksmith.com pnpm -C apps/web build
+```
+```text
+> apps-web@0.0.1 build /Users/hushdesk/dev/keyhive/apps/web
+> astro build
+
+19:09:03 [content] Syncing content
+19:09:03 [content] Synced content
+19:09:03 [types] Generated 11ms
+19:09:03 [build] output: "static"
+19:09:03 [build] mode: "static"
+19:09:03 [build] directory: /Users/hushdesk/dev/keyhive/apps/web/dist/
+19:09:03 [build] Collecting build info...
+19:09:03 [build] ✓ Completed in 17ms.
+19:09:03 [build] Building static entrypoints...
+19:09:04 [vite] ✓ built in 361ms
+19:09:04 [build] ✓ Completed in 376ms.
+
+ generating static routes 
+19:09:04 ▶ src/pages/about/index.astro
+19:09:04   └─ /about/index.html (+3ms) 
+19:09:04 ▶ src/pages/areas/[slug].astro
+19:09:04   ├─ /areas/kansas-city-ks/index.html (+1ms) 
+19:09:04   ├─ /areas/bonner-springs/index.html (+1ms) 
+19:09:04   ├─ /areas/basehor/index.html (+1ms) 
+19:09:04   ├─ /areas/lansing/index.html (+1ms) 
+19:09:04   ├─ /areas/leavenworth/index.html (+1ms) 
+19:09:04   ├─ /areas/tonganoxie/index.html (+0ms) 
+19:09:04   ├─ /areas/overland-park/index.html (+0ms) 
+19:09:04   ├─ /areas/olathe/index.html (+0ms) 
+19:09:04   ├─ /areas/lenexa/index.html (+0ms) 
+19:09:04   ├─ /areas/shawnee/index.html (+0ms) 
+19:09:04   ├─ /areas/mission/index.html (+0ms) 
+19:09:04   ├─ /areas/merriam/index.html (+0ms) 
+19:09:04   ├─ /areas/leawood/index.html (+0ms) 
+19:09:04   ├─ /areas/prairie-village/index.html (+0ms) 
+19:09:04   ├─ /areas/wyandotte-county/index.html (+0ms) 
+19:09:04   ├─ /areas/johnson-county/index.html (+0ms) 
+19:09:04   └─ /areas/leavenworth-county/index.html (+0ms) 
+19:09:04 ▶ src/pages/areas/index.astro
+19:09:04   └─ /areas/index.html (+0ms) 
+19:09:04 ▶ src/pages/contact/index.astro
+19:09:04   └─ /contact/index.html (+0ms) 
+19:09:04 ▶ src/pages/guides/[slug].astro
+19:09:04   ├─ /guides/home-lockout-steps/index.html (+0ms) 
+19:09:04   ├─ /guides/rekey-vs-replace/index.html (+0ms) 
+19:09:04   └─ /guides/car-key-programming-basics/index.html (+0ms) 
+19:09:04 ▶ src/pages/guides/index.astro
+19:09:04   └─ /guides/index.html (+0ms) 
+19:09:04 ▶ src/pages/locksmith-near-me/index.astro
+19:09:04   └─ /locksmith-near-me/index.html (+0ms) 
+19:09:04 ▶ src/pages/privacy-policy/index.astro
+19:09:04   └─ /privacy-policy/index.html (+0ms) 
+19:09:04 ▶ src/pages/services/[slug].astro
+19:09:04   ├─ /services/emergency-locksmith/index.html (+1ms) 
+19:09:04   ├─ /services/residential-locksmith/index.html (+0ms) 
+19:09:04   ├─ /services/residential-lockout/index.html (+0ms) 
+19:09:04   ├─ /services/lock-repair/index.html (+0ms) 
+19:09:04   ├─ /services/lock-installation/index.html (+0ms) 
+19:09:04   ├─ /services/rekeying-services/index.html (+0ms) 
+19:09:04   ├─ /services/commercial-locksmith/index.html (+0ms) 
+19:09:04   ├─ /services/commercial-lockout/index.html (+0ms) 
+19:09:04   ├─ /services/automotive-locksmith/index.html (+0ms) 
+19:09:04   ├─ /services/car-lockout/index.html (+0ms) 
+19:09:04   ├─ /services/car-key-programming/index.html (+0ms) 
+19:09:04   ├─ /services/high-security-lock-installation/index.html (+0ms) 
+19:09:04   ├─ /services/garage-door-lock-service/index.html (+0ms) 
+19:09:04   ├─ /services/home-lockout-prevention/index.html (+0ms) 
+19:09:04   ├─ /services/smart-lock-installation/index.html (+0ms) 
+19:09:04   ├─ /services/home-security-improvements/index.html (+0ms) 
+19:09:04   ├─ /services/broken-key-removal/index.html (+0ms) 
+19:09:04   ├─ /services/sliding-door-window-lock-service/index.html (+0ms) 
+19:09:04   ├─ /services/residential-safe-opening/index.html (+0ms) 
+19:09:04   └─ /services/master-key-systems/index.html (+0ms) 
+19:09:04 ▶ src/pages/services/index.astro
+19:09:04   └─ /services/index.html (+0ms) 
+19:09:04 λ src/pages/sitemap.xml.ts
+19:09:04   └─ /sitemap.xml (+0ms) 
+19:09:04 ▶ src/pages/index.astro
+19:09:04   └─ /index.html (+0ms) 
+19:09:04 ✓ Completed in 32ms.
+
+19:09:04 [build] 48 page(s) built in 435ms
+19:09:04 [build] Complete!
+```
