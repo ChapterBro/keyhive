@@ -1,0 +1,26 @@
+---
+import { brand } from '../config/brand';
+import { contact } from '../config/contact';
+import { withTrailingSlash } from '../utils/urls';
+---
+
+<header class="w-full border-b border-white/60 bg-white/70 backdrop-blur">
+  <div class="container flex items-center justify-between py-4">
+    <a href={withTrailingSlash('/')} class="flex items-center gap-3 text-lg font-semibold text-slate-900">
+      <img src={brand.logoPath} alt={`${brand.name} logo`} class="h-10 w-10 rounded-full object-contain" loading="eager" />
+      <span class="font-display text-xl tracking-wide">{brand.name}</span>
+    </a>
+    <nav class="hidden items-center gap-6 text-sm font-semibold text-slate-700 md:flex">
+      <a class="hover:text-slate-900" href={withTrailingSlash('/services')}>Services</a>
+      <a class="hover:text-slate-900" href={withTrailingSlash('/areas')}>Locations</a>
+      <a class="hover:text-slate-900" href={withTrailingSlash('/about')}>About</a>
+      <a class="hover:text-slate-900" href={withTrailingSlash('/contact')}>Contact</a>
+    </nav>
+    <a
+      href={contact.phoneHref}
+      class="hidden rounded-full border border-accent bg-accent px-4 py-2 text-sm font-semibold text-slate-900 shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg md:inline-flex"
+    >
+      Call {contact.phoneDisplay}
+    </a>
+  </div>
+</header>

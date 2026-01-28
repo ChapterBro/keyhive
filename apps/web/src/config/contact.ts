@@ -1,0 +1,30 @@
+export const contact = {
+  phoneDisplay: '(913) 944-8187',
+  phoneE164: '+19139448187',
+  phoneHref: 'tel:+19139448187',
+  email: 'KeyHive913@gmail.com',
+  domain: 'keyhivelocksmith.com',
+  siteUrl: 'https://keyhivelocksmith.com',
+  primaryCity: 'Kansas City, KS',
+  hours: '24/7',
+  priceRange: 'Varies',
+  serviceAreas: [
+    'Kansas City, KS',
+    'Bonner Springs',
+    'Basehor',
+    'Lansing',
+    'Leavenworth',
+    'Tonganoxie',
+    'Overland Park',
+    'Olathe',
+    'Lenexa',
+    'Shawnee',
+    'Mission',
+    'Merriam',
+    'Leawood',
+    'Prairie Village',
+    'Wyandotte County',
+    'Johnson County',
+    'Leavenworth County'
+  ]
+};

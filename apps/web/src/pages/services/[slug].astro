@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { services, type Service } from '../../content/services';
+import { createLocalBusinessSchema } from '../../utils/schema';
+import { contact } from '../../config/contact';
+import { withTrailingSlash } from '../../utils/urls';
+
+export function getStaticPaths() {
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service }
+  }));
+}
+
+const { service } = Astro.props as { service: Service };
+const canonicalPath = `/services/${service.slug}/`;
+const related = services.filter((item) => item.slug !== service.slug).slice(0, 3);
+---
+
+<BaseLayout
+  title={service.title}
+  description={service.description}
+  canonicalPath={canonicalPath}
+  jsonLd={createLocalBusinessSchema(canonicalPath)}
+>
+  <section class="container py-14">
+    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <div class="space-y-6">
+        <p class="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Service</p>
+        <h1 class="font-display text-4xl text-slate-900">{service.name}</h1>
+        <p class="text-lg text-slate-700">{service.overview}</p>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a
+            class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-base font-semibold text-slate-900"
+            href={contact.phoneHref}
+          >
+            Call {contact.phoneDisplay}
+          </a>
+          <a
+            class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-base font-semibold text-slate-700"
+            href={withTrailingSlash('/contact')}
+          >
+            Request service
+          </a>
+        </div>
+      </div>
+      <div class="rounded-3xl border border-white/80 bg-white/90 p-6 shadow-soft">
+        <h2 class="text-lg font-semibold text-slate-900">Best for</h2>
+        <ul class="mt-4 space-y-3 text-sm text-slate-700">
+          {service.idealFor.map((item) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-2">
+      <div class="rounded-3xl border border-white/80 bg-white p-6 shadow-soft">
+        <h2 class="text-lg font-semibold text-slate-900">What we handle</h2>
+        <ul class="mt-4 space-y-3 text-sm text-slate-700">
+          {service.bullets.map((item) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="rounded-3xl border border-white/80 bg-white p-6 shadow-soft">
+        <h2 class="text-lg font-semibold text-slate-900">How it works</h2>
+        <ol class="mt-4 space-y-3 text-sm text-slate-700">
+          {service.process.map((step, index) => (
+            <li class="flex items-start gap-3">
+              <span class="flex h-7 w-7 items-center justify-center rounded-full border border-accent text-xs font-semibold text-accent">
+                {index + 1}
+              </span>
+              <span>{step}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-3xl border border-slate-900 bg-slate-900 px-8 py-10 text-white">
+      <div class="grid gap-6 md:grid-cols-[1.3fr_0.7fr]">
+        <div>
+          <h2 class="font-display text-2xl">Need this service today?</h2>
+          <p class="mt-3 text-sm text-slate-200">
+            We are available {contact.hours} for urgent locksmith support across Kansas City, KS and nearby communities.
+          </p>
+        </div>
+        <div class="flex items-center md:justify-end">
+          <a
+            class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-base font-semibold text-slate-900"
+            href={contact.phoneHref}
+          >
+            Call {contact.phoneDisplay}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-lg font-semibold text-slate-900">Explore other services</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {related.map((item) => (
+          <a
+            class="rounded-2xl border border-white/80 bg-white p-4 text-sm font-semibold text-slate-800 shadow-soft"
+            href={withTrailingSlash(`/services/${item.slug}`)}
+          >
+            {item.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

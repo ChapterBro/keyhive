@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { serviceAreas, type ServiceArea } from '../../content/service_areas';
+import { services } from '../../content/services';
+import { brand } from '../../config/brand';
+import { contact } from '../../config/contact';
+import { createLocalBusinessSchema } from '../../utils/schema';
+import { withTrailingSlash } from '../../utils/urls';
+
+export function getStaticPaths() {
+  return serviceAreas.map((area) => ({
+    params: { slug: area.slug },
+    props: { area }
+  }));
+}
+
+const { area } = Astro.props as { area: ServiceArea };
+const canonicalPath = `/areas/${area.slug}/`;
+const nearbyAreas = area.nearby
+  .map((slug) => serviceAreas.find((item) => item.slug === slug))
+  .filter((item): item is ServiceArea => Boolean(item));
+const featuredServices = services.slice(0, 6);
+
+const defaultBlurb = `${brand.name} provides mobile locksmith service throughout ${area.name}. We cover residential, commercial, and automotive needs with ${contact.hours} availability and clear estimates.`;
+---
+
+<BaseLayout
+  title={`Locksmith in ${area.name}`}
+  description={`KeyHive provides mobile locksmith services in ${area.name}. Call for lockouts, rekeying, repairs, and key services with 24/7 availability.`}
+  canonicalPath={canonicalPath}
+  jsonLd={createLocalBusinessSchema(canonicalPath)}
+>
+  <section class="container py-14">
+    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <div class="space-y-6">
+        <p class="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Service Area</p>
+        <h1 class="font-display text-4xl text-slate-900">{area.name} locksmith service</h1>
+        <p class="text-lg text-slate-700">{area.blurb ?? defaultBlurb}</p>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a
+            class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-base font-semibold text-slate-900"
+            href={contact.phoneHref}
+          >
+            Call {contact.phoneDisplay}
+          </a>
+          <a
+            class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-base font-semibold text-slate-700"
+            href={withTrailingSlash('/services')}
+          >
+            Explore services
+          </a>
+        </div>
+      </div>
+      <div class="rounded-3xl border border-white/80 bg-white/90 p-6 shadow-soft">
+        <h2 class="text-lg font-semibold text-slate-900">Local support includes</h2>
+        <ul class="mt-4 space-y-3 text-sm text-slate-700">
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+            <span>Emergency lockout response and entry assistance</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+            <span>Rekeying, repairs, and security upgrades on-site</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+            <span>Mobile automotive key support and lockout help</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {area.landmarks?.length ? (
+      <div class="mt-12 rounded-3xl border border-white/80 bg-white p-6 shadow-soft">
+        <h2 class="text-lg font-semibold text-slate-900">Nearby landmarks</h2>
+        <ul class="mt-4 grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
+          {area.landmarks.map((landmark) => (
+            <li class="rounded-2xl border border-slate-100 bg-white px-4 py-3">{landmark}</li>
+          ))}
+        </ul>
+      </div>
+    ) : null}
+
+    <div class="mt-12">
+      <h2 class="text-lg font-semibold text-slate-900">Popular services in {area.name}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {featuredServices.map((service) => (
+          <a
+            class="rounded-2xl border border-white/80 bg-white p-4 text-sm font-semibold text-slate-800 shadow-soft"
+            href={withTrailingSlash(`/services/${service.slug}`)}
+          >
+            {service.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-3xl border border-white/80 bg-white p-6 shadow-soft">
+      <h2 class="text-lg font-semibold text-slate-900">Nearby areas</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {nearbyAreas.map((nearby) => (
+          <a
+            class="rounded-2xl border border-slate-100 bg-white px-4 py-3 text-sm font-semibold text-slate-800"
+            href={withTrailingSlash(`/areas/${nearby.slug}`)}
+          >
+            {nearby.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

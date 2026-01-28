@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { cityAreas, countyAreas } from '../../content/service_areas';
+import { createLocalBusinessSchema } from '../../utils/schema';
+import { withTrailingSlash } from '../../utils/urls';
+
+const canonicalPath = '/areas/';
+---
+
+<BaseLayout
+  title="Service Areas in Kansas"
+  description="KeyHive provides mobile locksmith service across Kansas City, KS, nearby cities, and surrounding counties."
+  canonicalPath={canonicalPath}
+  jsonLd={createLocalBusinessSchema(canonicalPath)}
+>
+  <section class="container py-14">
+    <div class="space-y-3">
+      <p class="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Locations</p>
+      <h1 class="font-display text-4xl text-slate-900">Kansas City, KS service area coverage</h1>
+      <p class="text-lg text-slate-700">
+        We are a mobile locksmith team, so we meet you wherever you are. Explore the cities and counties we serve throughout the Kansas side of the metro.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-8 md:grid-cols-2">
+      <div class="rounded-3xl border border-white/80 bg-white p-6 shadow-soft">
+        <h2 class="text-xl font-semibold text-slate-900">Cities</h2>
+        <div class="mt-4 grid gap-3 sm:grid-cols-2">
+          {cityAreas.map((area) => (
+            <a
+              class="rounded-2xl border border-slate-100 bg-white px-4 py-3 text-sm font-semibold text-slate-800"
+              href={withTrailingSlash(`/areas/${area.slug}`)}
+            >
+              {area.name}
+            </a>
+          ))}
+        </div>
+      </div>
+      <div class="rounded-3xl border border-white/80 bg-white p-6 shadow-soft">
+        <h2 class="text-xl font-semibold text-slate-900">Counties</h2>
+        <div class="mt-4 grid gap-3">
+          {countyAreas.map((area) => (
+            <a
+              class="rounded-2xl border border-slate-100 bg-white px-4 py-3 text-sm font-semibold text-slate-800"
+              href={withTrailingSlash(`/areas/${area.slug}`)}
+            >
+              {area.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

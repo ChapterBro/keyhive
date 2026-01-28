@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { brand } from '../../config/brand';
+import { contact } from '../../config/contact';
+import { createLocalBusinessSchema } from '../../utils/schema';
+
+const canonicalPath = '/about/';
+---
+
+<BaseLayout
+  title="About KeyHive"
+  description="Learn about KeyHive, a mobile locksmith serving Kansas City, KS and nearby communities with 24/7 support."
+  canonicalPath={canonicalPath}
+  jsonLd={createLocalBusinessSchema(canonicalPath)}
+>
+  <section class="container py-14">
+    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <div class="space-y-6">
+        <p class="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">About</p>
+        <h1 class="font-display text-4xl text-slate-900">{brand.name} keeps Kansas City, KS secure</h1>
+        <p class="text-lg text-slate-700">
+          {brand.name} is a mobile locksmith service focused on fast response and careful workmanship. We support residential, commercial, and automotive needs throughout Kansas City, KS and the surrounding metro.
+        </p>
+        <p class="text-base text-slate-700">
+          Our technicians arrive with the right tools to solve lockouts, rekeys, repairs, and installations on-site. Whether you need urgent help or a planned security upgrade, we deliver clear options and professional service every step of the way.
+        </p>
+      </div>
+      <div class="space-y-4 rounded-3xl border border-white/80 bg-white/90 p-6 shadow-soft">
+        <h2 class="text-lg font-semibold text-slate-900">What to expect</h2>
+        <ul class="space-y-3 text-sm text-slate-700">
+          <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>Mobile service across Kansas City, KS</li>
+          <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>{contact.hours} availability for urgent needs</li>
+          <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>Clear estimates before work begins</li>
+          <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>Focused on safe, non-destructive entry</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-3xl border border-slate-900 bg-slate-900 px-8 py-10 text-white">
+      <div class="grid gap-6 md:grid-cols-[1.3fr_0.7fr]">
+        <div>
+          <h2 class="font-display text-2xl">Ready for locksmith service?</h2>
+          <p class="mt-3 text-sm text-slate-200">
+            Call today to discuss your needs or request immediate assistance anywhere in the Kansas City, KS area.
+          </p>
+        </div>
+        <div class="flex items-center md:justify-end">
+          <a
+            class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-base font-semibold text-slate-900"
+            href={contact.phoneHref}
+          >
+            Call {contact.phoneDisplay}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

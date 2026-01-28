@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { services } from '../../content/services';
+import { cityAreas } from '../../content/service_areas';
+import { contact } from '../../config/contact';
+import { createLocalBusinessSchema } from '../../utils/schema';
+import { withTrailingSlash } from '../../utils/urls';
+
+const canonicalPath = '/locksmith-near-me/';
+const highlightedServices = services.slice(0, 6);
+const nearbyCities = cityAreas.slice(0, 9);
+---
+
+<BaseLayout
+  title="Locksmith Near Me in Kansas City, KS"
+  description="Looking for a locksmith near you? KeyHive provides 24/7 mobile locksmith service across Kansas City, KS and nearby areas."
+  canonicalPath={canonicalPath}
+  jsonLd={createLocalBusinessSchema(canonicalPath)}
+>
+  <section class="container py-14">
+    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <div class="space-y-6">
+        <p class="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Locksmith Near Me</p>
+        <h1 class="font-display text-4xl text-slate-900">Nearby locksmith help in Kansas City, KS</h1>
+        <p class="text-lg text-slate-700">
+          KeyHive is a local mobile locksmith team that comes directly to you. We cover homes, businesses, and vehicles with 24/7 availability and a focus on safe, non-destructive entry.
+        </p>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a
+            class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-base font-semibold text-slate-900"
+            href={contact.phoneHref}
+          >
+            Call {contact.phoneDisplay}
+          </a>
+          <a
+            class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-base font-semibold text-slate-700"
+            href={withTrailingSlash('/contact')}
+          >
+            Request help
+          </a>
+        </div>
+      </div>
+      <div class="rounded-3xl border border-white/80 bg-white/90 p-6 shadow-soft">
+        <h2 class="text-lg font-semibold text-slate-900">What we can help with</h2>
+        <ul class="mt-4 space-y-3 text-sm text-slate-700">
+          {highlightedServices.map((service) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+              <span>{service.name}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-3xl border border-white/80 bg-white p-6 shadow-soft">
+      <h2 class="text-lg font-semibold text-slate-900">Nearby service areas</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {nearbyCities.map((area) => (
+          <a
+            class="rounded-2xl border border-slate-100 bg-white px-4 py-3 text-sm font-semibold text-slate-800"
+            href={withTrailingSlash(`/areas/${area.slug}`)}
+          >
+            {area.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-3xl border border-slate-900 bg-slate-900 px-8 py-10 text-white">
+      <div class="grid gap-6 md:grid-cols-[1.3fr_0.7fr]">
+        <div>
+          <h2 class="font-display text-2xl">Need help right now?</h2>
+          <p class="mt-3 text-sm text-slate-200">
+            We are available {contact.hours}. Call to get an ETA and clear pricing guidance.
+          </p>
+        </div>
+        <div class="flex items-center md:justify-end">
+          <a
+            class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-base font-semibold text-slate-900"
+            href={contact.phoneHref}
+          >
+            Call {contact.phoneDisplay}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
