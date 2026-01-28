@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { services } from '../../content/services';
+import { createLocalBusinessSchema } from '../../utils/schema';
+import { withTrailingSlash } from '../../utils/urls';
+
+const canonicalPath = '/services/';
+---
+
+<BaseLayout
+  title="Locksmith Services in Kansas City, KS"
+  description="Explore KeyHive locksmith services including emergency response, residential, commercial, and automotive support across Kansas City, KS."
+  canonicalPath={canonicalPath}
+  jsonLd={createLocalBusinessSchema(canonicalPath)}
+>
+  <section class="container py-14">
+    <div class="space-y-3">
+      <p class="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">Services</p>
+      <h1 class="font-display text-4xl text-slate-900">Locksmith services built for Kansas City, KS</h1>
+      <p class="text-lg text-slate-700">
+        From urgent lockouts to planned security upgrades, KeyHive provides mobile locksmith service with clear options and fast response times.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {services.map((service) => (
+        <a
+          class="group flex h-full flex-col justify-between rounded-3xl border border-white/80 bg-white p-6 shadow-soft transition hover:-translate-y-0.5"
+          href={withTrailingSlash(`/services/${service.slug}`)}
+        >
+          <div>
+            <h2 class="text-xl font-semibold text-slate-900">{service.name}</h2>
+            <p class="mt-2 text-sm text-slate-600">{service.description}</p>
+          </div>
+          <span class="mt-6 text-sm font-semibold text-accent">View details -></span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

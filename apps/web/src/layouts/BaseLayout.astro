@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import StickyCta from '../components/StickyCta.astro';
+import { brand } from '../config/brand';
+import { buildCanonical, ensureTrailingSlash, getSiteUrl } from '../utils/urls';
+
+export type BaseLayoutProps = {
+  title?: string;
+  description?: string;
+  canonicalPath: string;
+  jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
+  noIndex?: boolean;
+};
+
+const { title, description, canonicalPath, jsonLd, noIndex = false } = Astro.props as BaseLayoutProps;
+const metaTitle = title ? `${title} | ${brand.name}` : brand.name;
+const metaDescription = description ?? brand.tagline;
+const canonicalUrl = buildCanonical(ensureTrailingSlash(canonicalPath));
+const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+const siteUrl = getSiteUrl();
+const ogImage = new URL(brand.logoPath, siteUrl).toString();
+const jsonLdItems = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{metaTitle}</title>
+    <meta name="description" content={metaDescription} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:site_name" content={brand.name} />
+    <meta property="og:title" content={metaTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={metaTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={ogImage} />
+    {noIndex ? <meta name="robots" content="noindex, nofollow" /> : null}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    {gaId ? (
+      <>
+        <script async is:inline src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline>
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);} 
+          gtag('js', new Date());
+          gtag('config', '${gaId}', { anonymize_ip: true });`}
+        </script>
+      </>
+    ) : null}
+
+    {jsonLdItems.map((item) => (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(item)} />
+    ))}
+  </head>
+  <body class="min-h-screen bg-transparent text-slate-900">
+    <a href="#main-content" class="sr-only focus:not-sr-only">Skip to content</a>
+    <Header />
+    <main id="main-content" class="pb-20 md:pb-0">
+      <slot />
+    </main>
+    <Footer />
+    <StickyCta />
+  </body>
+</html>

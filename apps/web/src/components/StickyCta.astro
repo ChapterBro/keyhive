@@ -1,0 +1,12 @@
+---
+import { contact } from '../config/contact';
+---
+
+<div class="fixed inset-x-0 bottom-0 z-40 bg-slate-900/95 px-4 py-3 text-white shadow-2xl md:hidden">
+  <a
+    href={contact.phoneHref}
+    class="flex w-full items-center justify-center gap-2 rounded-full bg-accent px-4 py-3 text-base font-semibold text-slate-900"
+  >
+    Call Now {contact.phoneDisplay}
+  </a>
+</div>

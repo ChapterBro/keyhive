@@ -1,3 +1,3 @@
 # KeyHive
 
-KeyHive mobile locksmith site (Kansas) — Astro + Tailwind.
+KeyHive mobile locksmith site (Kansas) - Astro + Tailwind.
