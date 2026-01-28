@@ -30,12 +30,16 @@ export const serviceAreas: ServiceArea[] = [
     slug: 'basehor',
     name: 'Basehor',
     type: 'city',
+    blurb:
+      'KeyHive provides mobile locksmith support in Basehor with lockouts, rekeys, and lock repairs for homes, businesses, and vehicles. We keep service quick and straightforward for local neighborhoods.',
     nearby: ['bonner-springs', 'tonganoxie', 'lansing', 'leavenworth', 'leavenworth-county']
   },
   {
     slug: 'lansing',
     name: 'Lansing',
     type: 'city',
+    blurb:
+      'KeyHive serves Lansing with mobile locksmith care for homes, apartments, and local businesses. We focus on fast lockout response and practical security upgrades.',
     nearby: ['leavenworth', 'basehor', 'tonganoxie', 'leavenworth-county', 'kansas-city-ks']
   },
   {
@@ -51,6 +55,8 @@ export const serviceAreas: ServiceArea[] = [
     slug: 'tonganoxie',
     name: 'Tonganoxie',
     type: 'city',
+    blurb:
+      'KeyHive offers mobile locksmith service across Tonganoxie with help for lockouts, rekeying, and hardware fixes. We arrive equipped to restore access without unnecessary damage.',
     nearby: ['basehor', 'leavenworth', 'lansing', 'bonner-springs', 'leavenworth-county']
   },
   {
@@ -83,12 +89,16 @@ export const serviceAreas: ServiceArea[] = [
     slug: 'shawnee',
     name: 'Shawnee',
     type: 'city',
+    blurb:
+      'KeyHive supports Shawnee with locksmith help for households and commercial spaces, including lock repairs, rekeying, and emergency entry.',
     nearby: ['lenexa', 'overland-park', 'kansas-city-ks', 'mission', 'johnson-county']
   },
   {
     slug: 'mission',
     name: 'Mission',
     type: 'city',
+    blurb:
+      'KeyHive provides mobile locksmith service in Mission with quick lockout response and careful lock upgrades for homes and small businesses.',
     nearby: ['merriam', 'leawood', 'prairie-village', 'kansas-city-ks', 'johnson-county']
   },
   {
@@ -104,30 +114,40 @@ export const serviceAreas: ServiceArea[] = [
     slug: 'leawood',
     name: 'Leawood',
     type: 'city',
+    blurb:
+      'KeyHive serves Leawood with mobile locksmith service focused on secure home access, rekeying, and lock upgrades tailored to your needs.',
     nearby: ['overland-park', 'prairie-village', 'mission', 'johnson-county', 'lenexa']
   },
   {
     slug: 'prairie-village',
     name: 'Prairie Village',
     type: 'city',
+    blurb:
+      'KeyHive helps Prairie Village residents with lockouts, rekeys, and lock repairs from a fully mobile setup. We prioritize clean workmanship and fast response.',
     nearby: ['leawood', 'mission', 'merriam', 'johnson-county', 'overland-park']
   },
   {
     slug: 'wyandotte-county',
     name: 'Wyandotte County',
     type: 'county',
+    blurb:
+      'KeyHive covers Wyandotte County with mobile locksmith service for Kansas City and nearby communities, including lockouts, rekeying, and repairs.',
     nearby: ['kansas-city-ks', 'bonner-springs', 'shawnee', 'mission', 'johnson-county']
   },
   {
     slug: 'johnson-county',
     name: 'Johnson County',
     type: 'county',
+    blurb:
+      'KeyHive serves Johnson County with mobile locksmith support for homes and businesses across the Kansas side of the metro, with 24/7 availability.',
     nearby: ['overland-park', 'olathe', 'lenexa', 'shawnee', 'mission', 'leawood']
   },
   {
     slug: 'leavenworth-county',
     name: 'Leavenworth County',
     type: 'county',
+    blurb:
+      'KeyHive provides mobile locksmith service throughout Leavenworth County with lockout response and rekeying for local homes and vehicles.',
     nearby: ['leavenworth', 'lansing', 'basehor', 'tonganoxie', 'bonner-springs']
   }
 ];

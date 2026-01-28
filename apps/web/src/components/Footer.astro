@@ -8,7 +8,15 @@ import { withTrailingSlash } from '../utils/urls';
   <div class="container grid gap-10 py-10 md:grid-cols-[1.2fr_0.8fr_1fr]">
     <div class="space-y-4">
       <div class="flex items-center gap-3">
-        <img src={brand.logoPath} alt={`${brand.name} logo`} class="h-10 w-10 rounded-full object-contain" loading="lazy" />
+        <img
+          src={brand.logoPath}
+          alt={`${brand.name} logo`}
+          class="h-10 w-10 rounded-full object-contain"
+          width="40"
+          height="40"
+          loading="lazy"
+          decoding="async"
+        />
         <div>
           <p class="font-display text-lg text-slate-900">{brand.name}</p>
           <p class="text-sm text-slate-600">{brand.tagline}</p>
