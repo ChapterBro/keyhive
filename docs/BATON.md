@@ -309,3 +309,6 @@ PUBLIC_SITE_URL=https://keyhivelocksmith.com pnpm -C apps/web build
 19:09:04 [build] 48 page(s) built in 435ms
 19:09:04 [build] Complete!
 ```
+
+## 2026-01-28
+- Removed garage door lock service from the services catalog per updated scope.

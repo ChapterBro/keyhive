@@ -323,32 +323,6 @@ export const services: Service[] = [
     ]
   },
   {
-    slug: 'garage-door-lock-service',
-    name: 'Garage Door Lock Service',
-    title: 'Mobile Garage Door Lock Service in Kansas City, KS',
-    description:
-      'Garage door lock service in Kansas City, KS for repairs, upgrades, and replacements on garage and side-door entry points.',
-    overview:
-      'Garage access is a common weak point. KeyHive installs, repairs, and upgrades garage and side-door locks to improve overall security.',
-    bullets: [
-      'Repair and replace garage door locks',
-      'Upgrade side-door entry hardware',
-      'Improve alignment and latch security',
-      'Mobile service at your location'
-    ],
-    process: [
-      'Inspect garage and side-door locks',
-      'Explain repair vs upgrade options',
-      'Complete service with proper alignment',
-      'Test locks and confirm secure closure'
-    ],
-    idealFor: [
-      'Aging or loose garage locks',
-      'New move-ins needing reset keys',
-      'Security upgrades for attached garages'
-    ]
-  },
-  {
     slug: 'home-lockout-prevention',
     name: 'Home Lockout Prevention',
     title: 'Mobile Home Lockout Prevention in Kansas City, KS',
