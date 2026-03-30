@@ -1,5 +1,14 @@
 # BATON Log
 
+## 2026-03-30
+- Documented the current production operating model: live KeyHive website changes are being made in
+  Wix Vibe + Wix dashboard and verified through the OpenClaw managed `web` profile.
+- Added [WIX_LIVE_SITE_MODEL.md](WIX_LIVE_SITE_MODEL.md) so future Codex sessions do not confuse
+  this Astro repo with the active Wix production deployment path.
+- Recorded that this repo may currently lag the live Wix site on the emergency-page rebuild,
+  mobile CTA refinements, area-page customer-language cleanup, and current sitemap/indexability
+  issues until a manual sync is performed.
+
 ## 2026-01-28
 - Initialized KeyHive monorepo with `apps/web` Astro + Tailwind site and `docs/` log structure.
 - Added brand/contact config, services/service areas/guides content sources, dynamic detail pages, sitemap, SEO/canonical tooling, JSON-LD, optional GA, and mobile sticky call CTA.
